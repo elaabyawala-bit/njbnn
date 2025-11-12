@@ -1,4 +1,4 @@
-name: njbnn
+name: RDP
 
 on:
   workflow_dispatch:
@@ -52,7 +52,7 @@ jobs:
           
           echo "RDP_CREDS=User: RDP | Password: $password" >> $env:GITHUB_ENV
           
-          if (-not (Get-LocalUser -Name "njbnn")) {
+          if (-not (Get-LocalUser -Name "RDP")) {
               Write-Error "User creation failed"
               exit 1
           }
